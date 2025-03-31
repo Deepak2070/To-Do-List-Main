@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>View To-Do List</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<%- include('navbar') %>
+		</header>
+		<main>
+			<h2 class="num-todo">Number of To-Do List : <%= Object.values(todo).length %></h2>
+			<% Object.values(todo).forEach(function(item){%>
+				<div class="todo">
+					<div class="edit-tab">
+						<div class="edit-title">
+							<h2><%= item.title %></h2>
+						</div>
+						<div class="edit-button">
+							<a href="/<%= item._id%>"><button type="submit">View</button></a>
+						</div>
+					</div>
+					<p class="date-time"><em><%= item.datetime.replace('T', ' ')%></em></p>
+					<p>
+						<%= item.text %>
+					</p>
+				</div>
+			<% }) %>
+
+			<% if(!Object.values(todo).length) {%>
+				<p class="todo-empty">
+					To-Do List is empty
+				</p>
+			<% } %>
+		</main>
+	</body>
+</html>
