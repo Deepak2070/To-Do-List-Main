@@ -17,6 +17,7 @@ To edit To-Do List you need to login first (username=admin, password=pass) <br/>
 Edit page for editing To-Do List or delete To-Do List<br/>
 <img height="200" src="public/images/edit.png"/> <br/>
 
+
 ## How to run the app
 1. Download the code
 2. Install MongoDB Community Server & MongoDB Compass
@@ -24,3 +25,14 @@ Edit page for editing To-Do List or delete To-Do List<br/>
 4. Run `npm install`
 5. Run `npm start`
 6. View the app at `http://localhost:3000/`
+
+    ## 🤝 Contributors  
+- [Deepak Kothawale](https://github.com/Deepak2070)
+-   - Email : kothawaledipk@gmil.com
+
+
+## 🙏 Acknowledgments  
+- Special thanks to OpenWeather API for providing free weather data.  
+
+   
+ 
